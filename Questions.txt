@@ -1,0 +1,38 @@
+- Explain the purpose of the Test (what the original test exposed, and what your test expose)
+
+The purpose of the original test was to look at each snapshot and match it up against a file.
+Every time the test succeeded, it would add to a counter.
+This means that we would never get any information about what the result of each test was, just how many of them that passed.
+The test that I wrote provides information regarding how many tests passed/failed and what the expected and actualt result is.
+
+- Explain about Parameterized Tests in JUnit and how you have used it in this exercise
+
+Parameterized tests goal is to be able to execute the same test over and over again, 
+but with different parameters, that come from an array of inputs.
+For the Java Test Class that I made, I used a file (containing a car plate), and a string containing the expected 
+values of that plate.
+It then compares the values found in the files of the 2 defined paths.
+
+- Explain the topic Data Driven Testing, and why it often makes a lot of sense to read test-data from a file.
+
+Data Driven Testing is when you test something while loading inputs from a seperate file.
+This file contains both inputs and the expected results.
+This way it's easy to expand with more inputs, since you only need to add more to the file,
+which you load from, and the code won't need to be changed.
+
+- Your answers to the question; whether what you implemented was a Unit Test or a JUnit Test, 
+the problems you might have discovered with the test and, your suggestions for ways this 
+could have been fixed.
+
+I implemented a unit test using the JUnit Framework.
+Unit testing is used to test small functionalities, usually a single method/function at a time,
+so that you can isolate single pieces of code, to better detect if that part of the code is broken,
+or have issues.
+
+- The steps you took to include Hamcrest matchers in the project, and the difference
+they made for the test
+
+I added the neccesary dependency to the pom file.
+As mentioned earlier, using Hamcrest means that we get more accurate test results, since we can see
+the actual results (passed/failed and why).
+Hamcrest also provides more readable code.
